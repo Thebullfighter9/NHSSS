@@ -3,6 +3,7 @@ import socketserver
 import webbrowser
 import subprocess
 import time
+import encrypt_token  # Import the encrypt_token module
 
 PORT_MAIN = 8000  # Port for the main page
 PORT_REVIEWS = 8001  # Use the same port as in reviews_server.py (8001)
@@ -34,7 +35,16 @@ def run_reviews_server(port):
 
 if __name__ == "__main__":
     # Start the main page server
-    main_server_process = subprocess.Popen(['python', 'reviews_server.py'])
-    time.sleep(1)  # Give it some time to start
-
+    main_server_process = subprocess.Popen(['python', 'main_server.py'])
+    
+    # Use encrypt_token to encrypt the token
+    token = "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"
+    encrypted_token = encrypt_token.encrypt(token)
+    
+    # Pass the encrypted token to the reviews server
+    reviews_server_process = subprocess.Popen(['python', 'reviews_server.py', encrypted_token])
+    
+    # Give it some time to start (optional)
+    time.sleep(1)
+    
     run_main_server(PORT_MAIN)
