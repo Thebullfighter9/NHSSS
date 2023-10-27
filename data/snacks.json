@@ -1,0 +1,39 @@
+{
+    "Monday": {
+        "Chips": [
+            { "name": "Talki's", "price": "1.00" },
+            { "name": "Lays", "price": "0.75" }
+        ],
+        "Candy": [
+            { "name": "Snickers", "price": "1.25" },
+            { "name": "M&M's", "price": "1.00" }
+        ],
+        "Drinks": [
+            { "name": "Soda", "price": "1.50" },
+            { "name": "Water", "price": "1.00" }
+        ]
+    },
+    "Tuesday": {
+        "Chips": [
+            { "name": "Doritos", "price": "0.75" },
+            { "name": "Pringles", "price": "1.00" }
+        ],
+        "Candy": [
+            { "name": "Kit Kat", "price": "1.25" },
+            { "name": "Skittles", "price": "0.75" }
+        ],
+        "Drinks": [
+            { "name": "Juice", "price": "1.25" },
+            { "name": "Tea", "price": "0.50" }
+        ]
+    },
+    "Wednesday": {
+        // Add snacks for Wednesday
+    },
+    "Thursday": {
+        // Add snacks for Thursday
+    },
+    "Friday": {
+        // Add snacks for Friday
+    }
+}

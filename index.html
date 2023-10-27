@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NHS Snack Shop</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to NHS Snack Shop</h1>
+    </header>
+    <main>
+        <div class="selection">
+            <label for="day-selector">Select a Day: </label>
+            <select id="day-selector"></select>
+            <label for "category-selector">Select a Category: </label>
+            <select id="category-selector"></select>
+            <input type="text" id="search" placeholder="Search...">
+        </div>
+        <div id="snacks-container">
+            <h2>Snacks for the selected day and category:</h2>
+            <ul id="snack-list"></ul>
+        </div>
+    </main>
+    <aside id="daily-specials">
+        <h2>Daily Specials</h2>
+        <ul id="specials-list"></ul>
+    </aside>
+    <section id="user-reviews">
+        <h2>User Reviews and Ratings</h2>
+        <div id="reviews-list"></div>
+        <!-- Add the "Go to Reviews" button below -->
+        <button id="go-to-reviews" onclick="goToReviewsPage()">Go to Reviews</button>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 NHS Snack Shop</p>
+            <a href="https://www.instagram.com/nhssnackshop/" target="_blank">
+                <img src="images/instagram-icon.png" alt="Instagram">
+            </a>
+        </div>
+    </footer>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
