@@ -41,3 +41,12 @@ async function fetchReviews() {
 
 // Call the function to fetch and display reviews
 fetchReviews();
+
+// Add an event listener to handle redirection to the review page
+document.addEventListener("DOMContentLoaded", function () {
+  const reviewsLink = document.querySelector('a[href="review.html"]');
+  reviewsLink.addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent the default link behavior
+    window.location.href = 'review.html'; // Redirect to the review page
+  });
+});
