@@ -42,5 +42,16 @@
         </div>
     </footer>
     <script defer src="scripts/review.js"></script>
+    <script>
+        // JavaScript code to show the review form when the "Leave a Review" button is clicked
+        document.addEventListener("DOMContentLoaded", function() {
+            const leaveReviewButton = document.getElementById("leave-review-button");
+            const reviewForm = document.getElementById("review-form");
+            
+            leaveReviewButton.addEventListener("click", function() {
+                reviewForm.style.display = "block";
+            });
+        });
+    </script>
 </body>
 </html>
