@@ -1,3 +1,4 @@
+
 from http.server import SimpleHTTPRequestHandler
 import http.server
 import socketserver
@@ -5,42 +6,30 @@ import json
 import sqlite3
 from urllib.parse import urlparse, parse_qs
 
-# Function to create the reviews table if it doesn't exist
 def create_reviews_table():
-    conn = sqlite3.connect('data/reviews.db')
+    conn = sqlite3.connect('reviews.db')
     cursor = conn.cursor()
-    cursor.execute('''
-    CREATE TABLE IF NOT EXISTS reviews (
-        id INTEGER PRIMARY KEY,
-        name TEXT,
-        description TEXT,
-        rating INTEGER
-    )
-    ''')
+    cursor.execute("CREATE TABLE IF NOT EXISTS reviews (id INTEGER PRIMARY KEY, name TEXT, description TEXT, rating INTEGER)")
     conn.commit()
     conn.close()
 
-# Function to add a review to the database
 def add_review(name, description, rating):
-    conn = sqlite3.connect('data/reviews.db')
+    conn = sqlite3.connect('reviews.db')
     cursor = conn.cursor()
     cursor.execute("INSERT INTO reviews (name, description, rating) VALUES (?, ?, ?)", (name, description, rating))
     conn.commit()
     conn.close()
 
-# Function to retrieve all reviews from the database
 def get_reviews():
-    conn = sqlite3.connect('data/reviews.db')
+    conn = sqlite3.connect('reviews.db')
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM reviews")
     reviews = cursor.fetchall()
     conn.close()
     return reviews
 
-# Custom request handler to log requests for debugging
 class CustomHandler(SimpleHTTPRequestHandler):
     def do_GET(self):
-        # Parse the URL to determine the path
         parsed_url = urlparse(self.path)
         path = parsed_url.path
 
@@ -51,7 +40,6 @@ class CustomHandler(SimpleHTTPRequestHandler):
                 self.end_headers()
                 self.wfile.write(file.read())
         elif path == '/api/reviews':
-            # Handle API request to get reviews
             reviews = get_reviews()
             self.send_response(200)
             self.send_header('Content-Type', 'application/json')
@@ -61,7 +49,6 @@ class CustomHandler(SimpleHTTPRequestHandler):
             super().do_GET()
 
     def do_POST(self):
-        # Parse the URL to determine the path
         parsed_url = urlparse(self.path)
         path = parsed_url.path
 
