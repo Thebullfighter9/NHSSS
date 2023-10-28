@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 { "name": "N/A", "price": "N/A" }
             ],
             "Drinks": [
-                { "name": "N/A", "price": "N/A" },
-                { "name": "N/A", "price": "N/A" }
+                { "name": "Fanta", "price": "2$ CASH ONLY" },
+                { "name": "Cola", "price": "2$ CASH ONLY" }
             ]
         },
         "Tuesday": {
@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 { "name": "N/A", "price": "N/A" }
             ],
             "Drinks": [
-                { "name": "N/A", "price": "N/A" },
-                { "name": "N/A", "price": "N/A" }
+                { "name": "Fanta", "price": "2$ CASH ONLY" },
+                { "name": "Cola", "price": "2$ CASH ONLY" }
             ]
         },
         "Wednesday": {
@@ -38,8 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 { "name": "N/A", "price": "N/A" }
             ],
             "Drinks": [
-                { "name": "N/A", "price": "N/A" },
-                { "name": "N/A", "price": "N/A" }
+                { "name": "Fanta", "price": "2$ CASH ONLY" },
+                { "name": "Cola", "price": "2$ CASH ONLY" }
             ]
         },
         "Thursday": {
@@ -52,8 +52,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 { "name": "N/A", "price": "N/A" }
             ],
             "Drinks": [
-                { "name": "N/A", "price": "N/A" },
-                { "name": "N/A", "price": "N/A" }
+                { "name": "Fanta", "price": "2$ CASH ONLY" },
+                { "name": "Cola", "price": "2$ CASH ONLY" }
             ]
         },
         "Friday": {
@@ -66,8 +66,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 { "name": "N/A", "price": "N/A" }
             ],
             "Drinks": [
-                { "name": "N/A", "price": "N/A" },
-                { "name": "N/A", "price": "N/A" }
+                { "name": "Fanta", "price": "2$ CASH ONLY" },
+                { "name": "Cola", "price": "2$ CASH ONLY" }
             ]
         }
     };
